@@ -93,6 +93,29 @@ baja este JSON de esta URL						      requests.get(url).json()
     Versión 1.0 — Compilador generativo (CogniLang)
 
 
+🧠 ¿Qué es la Memoria Asociativa en Eslang v0.3?
+
+Cada vez que el usuario da una orden y Eslang la ejecuta (o la resuelve tras una pregunta), guardamos un registro:
+
+    La orden original (en español).
+
+    El código Python final que se ejecutó.
+
+    Un vector numérico (embedding) que representa semánticamente esa orden.
+
+Cuando el usuario escriba una nueva orden, Eslang:
+
+    Calcula su embedding.
+
+    Busca en la memoria la orden más parecida semánticamente (usando similitud coseno).
+
+    Si la similitud es alta (ej: > 0.85), recupera el código de esa memoria y lo ejecuta directamente.
+
+    Si es baja, llama a la API (como antes) y guarda el resultado en memoria.
+
+Resultado: Con el tiempo, Eslang se vuelve más rápido, más barato y más personalizado.
+
+
 
 ## 🫡 Contribuye
 
