@@ -1,7 +1,15 @@
-# Core dependencies for Eslang v0.1
+# Core dependencies
 openai>=1.0.0
 python-dotenv>=1.0.0
 
-# Nuevas para v0.3
+# Para la versión 0.3 (memoria asociativa)
 chromadb>=0.4.0
 sentence-transformers>=2.2.0
+
+# Para la versión 0.4 (lógica difusa y optimización)
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Utilidades adicionales
+requests>=2.31.0
+tqdm>=4.65.0  # Para barras de progreso (opcional)
